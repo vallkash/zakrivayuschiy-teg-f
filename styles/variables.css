@@ -1,11 +1,11 @@
 :root {
     --main-font: 'Inter-Variable';
-    --accent-font: 'PressStart2P';
+    --accent-font: 'Press Start 2P';
     --wght-main-text: 410;
     --wght-title: 715;
-    --gradient-to-right: repeating-linear-gradient(to right, #d3d3d3 2px, transparent 2px 4px);
-    --gradient-to-bottom: repeating-linear-gradient(to bottom, #d3d3d3 2px, transparent 2px 4px);
-    --third-gradient: linear-gradient(0.01% to bottom #e7e7e7 , #1a1a1a) ;
-    --width-block: clamp(375px, 100wv, 700px); /*надо проверить верность*/ 
+    --bg-gradient: repeating-linear-gradient(to right, #d3d3d3 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 2px, transparent 2px 4px),
+    linear-gradient(to bottom #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+    --width-block: clamp(23.4375rem, 100vw, 43.75rem); /*надо проверить верность*/ 
     /*логотип заголовок и отступы в шапке тож резиновые через clamp*/
 }
