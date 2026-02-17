@@ -1,5 +1,6 @@
 /* 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+Для корректной работы скриптов на этом сайте нужно, 
+чтобы в HTML некоторые классы были названы особым образом:
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
@@ -18,4 +19,6 @@
 .header {
   background-image: var(--gradient-to-right), var(--gradient-to-bottom), var(--third-gradient);
   background-size: cover;
+  background-position: fixed;
+  inline-size: var(--width-block);
 }
