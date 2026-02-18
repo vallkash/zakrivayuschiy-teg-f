@@ -25,7 +25,7 @@
 .header {
   inline-size: var(--width-block);
   font-family: var(--accent-font), monospace;
-  vertical-align: bottom;
+  font-weight: 400;
   display: grid;
   margin-inline: auto;
   justify-content: center;
