@@ -26,6 +26,7 @@
 .header {
   inline-size: var(--width-block);
   font-family: var(--accent-font);
+  vertical-align: bottom;
   display: grid;
   margin-inline: auto;
   justify-content: center;
@@ -70,6 +71,8 @@
 .card__image {
   inline-size: clamp(23.1875rem, 100%, 43.5rem);
   block-size: clamp(23.1875rem, 16.0359rem + 30.5157vw , 43.5rem);
+  border-block-start: solid 2px #000;;
+  border-block-end: solid 2px #000;;
 }
 
 .card__description {
