@@ -24,7 +24,7 @@
 
 .header {
   inline-size: var(--width-block);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
   vertical-align: bottom;
   display: grid;
   margin-inline: auto;
@@ -58,7 +58,7 @@
   display: grid;
   justify-content: center;
   border: solid 2px #000;
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
 }
 
@@ -101,7 +101,7 @@
   block-size: 2.375rem;
   background-color: transparent;
   border: 2px solid #000;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
   justify-self: end;
 }
 
