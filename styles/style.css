@@ -85,7 +85,7 @@
   font-weight: 400;
   font-size: 0.875rem;
   mix-blend-mode: hard-light;
-  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px #fff;
 }
 
 @supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
