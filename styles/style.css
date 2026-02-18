@@ -113,7 +113,7 @@
   padding: 50px clamp(2.15625rem, -1.1010rem + 13.8967vw , 11.40625rem) 100px;
   display: grid;
   justify-items: center;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .footer__button {
@@ -121,5 +121,5 @@
   inline-size: 100%;
   border: 2px solid #000;
   font-family: var(--accent-font), monospace;
-  background-color: transparent;
+  background-color: #fff;
 }
