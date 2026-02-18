@@ -28,7 +28,7 @@
   font-weight: 400;
   display: grid;
   margin-inline: auto;
-  justify-content: center;
+  text-align: center;
   border: solid 2px #000;
   padding-block: clamp(7.625rem, 8.1263rem - 2.1390vw, 8.125rem);
   padding-inline: clamp(1rem, -1.3437rem + 9.9996vw, 7.65625rem);
