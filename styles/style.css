@@ -65,6 +65,7 @@
 .card__title {
   font-variation-settings: 'wght' var(--wght-title);
   inline-size: 100%;
+  padding: 4px 10px;
 }
 
 .card__image-container {
