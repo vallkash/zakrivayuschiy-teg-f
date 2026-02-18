@@ -34,6 +34,7 @@
   padding-inline: clamp(1rem, -1.3437rem + 9.9996vw, 7.65625rem);
   margin-block: 100px;
   text-transform: uppercase;
+  background-color: #fff;
 }
 
 .logo {
@@ -60,6 +61,7 @@
   border: solid 2px #000;
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
+  background-color: #fff;
 }
 
 .card__title {
@@ -110,6 +112,7 @@
   padding: 50px clamp(2.15625rem, -1.1010rem + 13.8967vw , 11.40625rem) 100px;
   display: grid;
   justify-items: center;
+  background-color: #fff;
 }
 
 .footer__button {
