@@ -81,8 +81,21 @@
   margin: 25px;
 }
 
+.card__button {
+  inline-size: 8.125rem;
+  block-size: 2.375rem;
+  background-color: transparent;
+  border: 2px solid #000;
+  font-family: var(--accent-font);
+}
+
 .footer {
   padding: 50px clamp(2.15625rem, -1.1010rem + 13.8967vw , 11.40625rem) 100px;
   display: grid;
   justify-items: center;
+}
+
+.footer__button {
+  block-size: clamp(5.25rem, 5.89rem + -2.72vw, 3.4375rem);
+  
 }
