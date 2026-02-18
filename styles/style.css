@@ -67,12 +67,20 @@
   inline-size: 100%;
 }
 
+.card__image-container {
+  position: relative;
+}
+
 .label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.5;
   inline-size: 6.125rem;
   block-size: 0.875rem;
   justify-self: end;
   align-self: start;
-  mix-blend-mode: hard-light; /*доделать позиционирование и добавить прозрачности вместе с обводкой*/
+  mix-blend-mode: hard-light; /*доделать позиционирование и добавить обводки*/
 }
 
 .card__image {
