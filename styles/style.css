@@ -98,7 +98,7 @@
 }
 
 .card__image {
-  inline-size: clamp(23.1875rem, 16.0359rem + 30.5157vw, 43.5rem);
+  inline-size: 100%;
   block-size: clamp(23.1875rem, 16.0359rem + 30.5157vw , 43.5rem);
   border-block-start: solid 2px #000;;
   border-block-end: solid 2px #000;;
@@ -116,11 +116,45 @@
   background-color: transparent;
   border: 2px solid #000;
   font-family: var(--accent-font), monospace;
+  font-size: 0.875rem;
   justify-self: end;
 }
 
 .button__text {
   line-height: 90%;
+}
+
+.button {
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.button:hover::before {
+  transform: translateX(0);
+}
+
+.button span,
+.icon {
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 1;
+  color: #fff;
 }
 
 .filter__brightness {
@@ -150,8 +184,6 @@
 .filter__opacity {
   filter: opacity(0.9) saturate(200%);
 }
-
-
 
 .footer {
   padding: 50px clamp(2.15625rem, -1.1010rem + 13.8967vw , 11.40625rem) 100px;
