@@ -12,7 +12,6 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   block-size: 100vh;
-  inline-size: 100dvi;
   font-family: var(--main-font), sans-serif;
   font-variation-settings: "wght" var(--wght-main-text);
   background-image: var(--bg-gradient);
@@ -72,6 +71,7 @@
 
 .card__image-container {
   position: relative;
+  block-size: clamp(23.1875rem, 16.0359rem + 30.5157vw, 43.5rem);
 }
 
 .label {
@@ -106,12 +106,15 @@
   block-size: clamp(23.1875rem, 16.0359rem + 30.5157vw, 43.5rem);
   border-block-start: solid 2px #000;
   border-block-end: solid 2px #000;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card__description {
   display: grid;
   gap: 25px;
   margin: 25px;
+  line-height: 21px;
 }
 
 .button__container {
@@ -139,11 +142,12 @@
   block-size: 2.25rem;
 }
 
-.card__icon-button:focus {
+.card__icon-button:focus-visible {
   outline: 2px solid #000;
 }
 
 .like-icon {
+  display: block;
   transform-origin: center;
 }
 
@@ -199,6 +203,7 @@
 
 .like-icon.is-liked .heart {
   animation: heart-scale 0.3s ease-in 0.1s 1;
+  transform-origin: center;
 }
 
 .sparks {
@@ -212,6 +217,7 @@
 
 .button__text {
   line-height: 90%;
+  font-size: 0.875rem;
 }
 
 .button {
@@ -275,7 +281,7 @@
   filter: opacity(0.9) saturate(200%);
 }
 
-.footer {
+.floppy__block {
   padding-block-start: 50px;
   padding-block-end: 100px;
   display: flex;
@@ -283,15 +289,13 @@
   justify-self: center;
   background-color: transparent;
   max-block-size: 5.25rem;
-  max-inline-size: 20.9375rem;
 }
 
-.footer__button {
+.floppy__button {
   block-size: clamp(5.25rem, 5.89rem + -2.72vw, 3.4375rem);
   inline-size: 100%;
   border: 2px solid #000;
   font-family: var(--accent-font), monospace;
-  font-size: 0.875rem;
   background-color: #fff;
   padding: 1.0625rem 1.25rem;
   display: flex;
@@ -300,19 +304,23 @@
   gap: 0.5rem;
 }
 
-.footer__button-icon {
-  block-size: 1.75rem;
-  inline-size: 1.75rem;
+.floppy__button-icon {
+  block-size: 28px;
+  inline-size: 28px;
 }
 
 @media (width > 375px) {
-  .footer__button {
+  .floppy__button {
     flex-direction: row;
   }
 
-  .footer__button-icon {
-    block-size: 1.3125rem;
-    inline-size: 1.3125rem;
+  .floppy__button-icon {
+    block-size: 21px;
+    inline-size: 21px;
+  }
+
+  .floppy__button-icon .button__text {
+    width: 266px;
   }
 }
 
@@ -320,13 +328,22 @@
   font-family: var(--accent-font), monospace;
   font-size: 0.875rem;
   display: grid;
-  grid-template-columns: min-content 1fr;
-  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  gap: 30px;
   text-transform: uppercase;
   font-weight: 400;
   position: fixed;
   inset: 0;
-  transition: opacity 0.3s ease-in-out; /*исправить резиновую длину и отступы*/
+  transition: opacity 0.3s ease-in-out;
+  inline-size: 341px;
+  padding: 30px 40px;
+}
+
+@media (width > 375px) {
+  .pop-up {
+    padding: 30px;
+    inline-size: 353px;
+  }
 }
 
 .pop-up:not([open]) {
@@ -339,8 +356,15 @@
   opacity: 75%;
 }
 
+.pop-up__description {
+  display: grid;
+  grid-template-columns: 39px 1fr;
+  gap: 20px;
+}
+
 .pop-up__icon {
-  block-size: 2.4375rem;
+  block-size: 39px;
+  inline-size: 39px;
   align-self: center;
 }
 
@@ -350,10 +374,8 @@
 }
 
 .pop-up__button {
-  margin-block-start: 0.625rem;
   inline-size: 100%;
   block-size: 2.375rem;
-  grid-column: 1/-1;
   line-height: 90%;
   border: 2px solid #000;
   background-color: #fff;
