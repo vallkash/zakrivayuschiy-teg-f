@@ -1,1 +1,1 @@
-https://github.com/vallkash/zakrivayuschiy-teg-f#
+https://vallkash.github.io/zakrivayuschiy-teg-f/
