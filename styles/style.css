@@ -23,6 +23,7 @@
 
 .header {
   inline-size: var(--width-block);
+  min-inline-size: 320px;
   font-family: var(--accent-font), monospace;
   font-weight: 400;
   display: grid;
@@ -30,11 +31,17 @@
   margin-inline: auto;
   text-align: center;
   border: solid 2px #000;
-  padding-block: clamp(7.625rem, 8.1263rem - 2.139vw, 8.125rem);
+  padding-block: clamp(122px, 119.18px + 0.75vw, 130px);
   padding-inline: clamp(1rem, -1.3437rem + 9.9996vw, 7.65625rem);
   margin-block: 100px;
   text-transform: uppercase;
   background-color: #fff;
+}
+
+@media (width > 375px) {
+  .header {
+    margin-block: 98px;
+  }
 }
 
 .logo {
@@ -50,7 +57,9 @@
 .content {
   display: grid;
   gap: 50px;
-  width: clamp(23.4375rem, 0rem + 100vw, 43.75rem);
+  width: var(--width-block);  
+  min-inline-size: 320px;     
+  margin: 0 auto;
 }
 
 .card {
@@ -281,25 +290,16 @@
   filter: opacity(0.9) saturate(200%);
 }
 
-.floppy__block {
-  padding-block-start: 50px;
-  padding-block-end: 100px;
-  display: flex;
-  justify-items: center;
-  justify-self: center;
-  background-color: transparent;
-  max-block-size: 5.25rem;
-}
-
 .floppy__button {
-  block-size: clamp(5.25rem, 5.89rem + -2.72vw, 3.4375rem);
-  inline-size: 100%;
   border: 2px solid #000;
   font-family: var(--accent-font), monospace;
   background-color: #fff;
   padding: 1.0625rem 1.25rem;
+  margin-block-end: 100px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  justify-self: center;
   align-items: center;
   gap: 0.5rem;
 }
@@ -307,6 +307,10 @@
 .floppy__button-icon {
   block-size: 28px;
   inline-size: 28px;
+}
+
+.floppy__button-icon .button__text {
+  width: 266px;
 }
 
 @media (width > 375px) {
@@ -317,10 +321,6 @@
   .floppy__button-icon {
     block-size: 21px;
     inline-size: 21px;
-  }
-
-  .floppy__button-icon .button__text {
-    width: 266px;
   }
 }
 
